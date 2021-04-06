@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{465829F6-EA70-46DC-8ECE-C80B70A06B91}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Teatrus</RootNamespace>
+    <AssemblyName>Teatrus</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\GUI\LoginRegistrationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\GUI\LoginRegistrationWindow.Designer.cs">
+      <DependentUpon>LoginRegistrationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\GUI\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\GUI\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlAccountInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlAccountInformation.Designer.cs">
+      <DependentUpon>UserControlAccountInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlCalendar.Designer.cs">
+      <DependentUpon>UserControlCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlCentralDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlCentralDashboard.Designer.cs">
+      <DependentUpon>UserControlCentralDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlListItem.Designer.cs">
+      <DependentUpon>UserControlListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlLogin.Designer.cs">
+      <DependentUpon>UserControlLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlRegistration.Designer.cs">
+      <DependentUpon>UserControlRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlSettings.Designer.cs">
+      <DependentUpon>UserControlSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlShowsAndPerformances.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Client\UserControls\UserControlShowsAndPerformances.Designer.cs">
+      <DependentUpon>UserControlShowsAndPerformances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Client\GUI\LoginRegistrationWindow.resx">
+      <DependentUpon>LoginRegistrationWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\GUI\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\UserControls\UserControlAccountInformation.resx">
+      <DependentUpon>UserControlAccountInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\UserControls\UserControlCalendar.resx">
+      <DependentUpon>UserControlCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\UserControls\UserControlCentralDashboard.resx">
+      <DependentUpon>UserControlCentralDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\UserControls\UserControlListItem.resx">
+      <DependentUpon>UserControlListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\UserControls\UserControlLogin.resx">
+      <DependentUpon>UserControlLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\UserControls\UserControlRegistration.resx">
+      <DependentUpon>UserControlRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\UserControls\UserControlSettings.resx">
+      <DependentUpon>UserControlSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\UserControls\UserControlShowsAndPerformances.resx">
+      <DependentUpon>UserControlShowsAndPerformances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Persistence\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theater.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %282%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook-logo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
