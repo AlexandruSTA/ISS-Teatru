@@ -48,7 +48,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 672,
-											"top": -160,
+											"top": -176,
 											"height": 13
 										},
 										{
@@ -59,7 +59,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 445,
-											"top": 143,
+											"top": 135,
 											"width": 2263,
 											"height": 13,
 											"text": "Teatrus - Use Case"
@@ -73,7 +73,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 672,
-											"top": -160,
+											"top": -176,
 											"width": 133.65625,
 											"height": 13,
 											"text": "(from ModelFuncțional)"
@@ -87,14 +87,14 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 672,
-											"top": -160,
+											"top": -176,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 440,
-									"top": 136,
+									"top": 128,
 									"width": 2273,
 									"height": 25,
 									"stereotypeLabel": {
@@ -113,7 +113,7 @@
 							],
 							"font": "Arial;13;0",
 							"left": 440,
-							"top": 136,
+							"top": 128,
 							"width": 2273,
 							"height": 1433,
 							"nameCompartment": {
