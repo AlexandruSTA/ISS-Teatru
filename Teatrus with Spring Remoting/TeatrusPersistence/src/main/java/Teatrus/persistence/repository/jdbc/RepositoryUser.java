@@ -45,7 +45,7 @@ public class RepositoryUser implements IRepositoryUser {
     public void save(User entity) {
         logger.traceEntry();
         Connection con=dbUtils.getConnection();
-        try(PreparedStatement preStmt=con.prepareStatement("insert into User(idUtilizator,nume,prenume,email,numeUtilizator,parola,tipUtilizator) values (?,?,?,?,?,?)")){
+        try(PreparedStatement preStmt=con.prepareStatement("insert into User(idUtilizator,nume,prenume,email,numeUtilizator,parola,tipUtilizator) values (?,?,?,?,?,?,?)")){
             preStmt.setInt(1,size()+1);
             preStmt.setString(2,entity.getNume());
             preStmt.setString(3, entity.getPrenume());

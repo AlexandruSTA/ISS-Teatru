@@ -3,6 +3,7 @@ package Teatrus.client;
 import Teatrus.model.User;
 import Teatrus.services.ITeatrusObserver;
 import Teatrus.services.TeatrusException;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,6 +11,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import org.springframework.context.ApplicationContext;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -31,6 +33,7 @@ public class TeatrusProfilFXML extends UnicastRemoteObject implements Initializa
     public TextField updateLastName;
     public TextField updateEmail;
     public TextField updatePassword;
+    public Button btnDelete;
 
     public TeatrusProfilFXML() throws RemoteException {
     }
@@ -139,5 +142,11 @@ public class TeatrusProfilFXML extends UnicastRemoteObject implements Initializa
 
     }
 
+    @FXML
+    public void delete(ActionEvent event) throws TeatrusException {
+        StartApp.serverOperations.logout(StartApp.user,null);
+        StartApp.serverOperations.deleteUser(StartApp.user);
+        System.exit(0);
 
+    }
 }

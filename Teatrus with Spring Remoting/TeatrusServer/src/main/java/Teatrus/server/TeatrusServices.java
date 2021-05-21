@@ -153,12 +153,20 @@ public class TeatrusServices implements ITeatrusServices {
         repositorySpectacol.save(spectacol);
     }
 
+    @Override
+    public void addUser(User user) {
+        repositoryUser.save(user);
+    }
 
     @Override
     public void deleteSpectacol(Spectacol spectacol) {
         repositorySpectacol.delete(spectacol.getIdSpectacol());
     }
 
+    @Override
+    public void deleteUser(User user) {
+        repositoryUser.delete(user.getIdUser());
+    }
 
     @Override
     public void updateUser(int id, User user) {

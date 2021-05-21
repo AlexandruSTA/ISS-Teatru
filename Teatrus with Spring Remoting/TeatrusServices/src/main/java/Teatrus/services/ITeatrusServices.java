@@ -11,8 +11,10 @@ public interface ITeatrusServices {
     void updateUserProfile(User utilizatorActualizat, ITeatrusObserver client) throws TeatrusException;
     List<User> getAllUsers();
     List<Spectacol> getAllShows();
+    void addUser(User user);
     void addSpectacol(Spectacol spectacol);
     void deleteSpectacol(Spectacol spectacol);
+    void deleteUser(User user);
     void updateUser(int id,User user);
     User findUser(User u);
     Spectacol findSpectacol(String titlu);
