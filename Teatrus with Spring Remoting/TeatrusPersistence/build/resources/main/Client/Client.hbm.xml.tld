@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="Teatrus.model.ClientORM.Client" table="CLIENT">
+        <id name="id_client" column="id_client">
+            <generator class="increment"/>
+        </id>
+            <property name="nume" column="nume"/>
+            <property name="prenume" column="prenume"/>
+            <property name="adresa" column="adresa"/>
+            <property name="nr_locuri" column="nr_locuri"/>
+            <property name="id_angajat"  column="id_angajat"/>
+    </class>
+
+
+</hibernate-mapping>

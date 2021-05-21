@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:properties id="serverProps">
+            <prop key="teatrus.db.url">jdbc:sqlite:Teatrus-DB/TeatrusDb.db</prop>
+    </util:properties>
+
+    <bean id="repositoryCardBancar" class="Teatrus.persistence.repository.jdbc.RepositoryCardBancar">
+        <constructor-arg name="props" ref="serverProps"/>
+    </bean>
+
+    <bean id="repositoryIstoric" class="Teatrus.persistence.repository.jdbc.RepositoryIstoric">
+        <constructor-arg name="props" ref="serverProps"/>
+    </bean>
+
+    <bean id="repositoryLoc" class="Teatrus.persistence.repository.jdbc.RepositoryLoc">
+        <constructor-arg name="props" ref="serverProps"/>
+    </bean>
+
+    <bean id="repositoryRezervare" class="Teatrus.persistence.repository.jdbc.RepositoryRezervare">
+        <constructor-arg name="props" ref="serverProps"/>
+    </bean>
+
+    <bean id="repositorySpectacol" class="Teatrus.persistence.repository.jdbc.RepositorySpectacol">
+        <constructor-arg name="props" ref="serverProps"/>
+    </bean>
+
+    <bean id="repositoryUser" class="Teatrus.persistence.repository.jdbc.RepositoryUser">
+        <constructor-arg name="props" ref="serverProps"/>
+    </bean>
+
+
+
+    <bean id="teatrusService" class="Teatrus.server.TeatrusServices" >
+        <constructor-arg name="repositoryCardBancar" ref="repositoryCardBancar"/>
+        <constructor-arg name="repositoryIstoric" ref="repositoryIstoric"/>
+        <constructor-arg name="repositoryLoc" ref="repositoryLoc"/>
+        <constructor-arg name="repositoryRezervare" ref="repositoryRezervare"/>
+        <constructor-arg name="repositorySpectacol" ref="repositorySpectacol"/>
+        <constructor-arg name="repositoryUser" ref="repositoryUser"/>
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="Teatrus"/>
+        <property name="service" ref="teatrusService"/>
+        <property name="serviceInterface" value="Teatrus.services.ITeatrusServices"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+
+
+
+
+
+
+
+</beans>

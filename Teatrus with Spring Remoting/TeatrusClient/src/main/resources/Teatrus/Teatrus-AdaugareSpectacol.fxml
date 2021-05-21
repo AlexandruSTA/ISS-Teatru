@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Teatrus.client.TeatrusAdaugareSpectacolFXML">
+<children>
+    <AnchorPane layoutX="-1.0" layoutY="31.0" prefHeight="571.0" prefWidth="900.0">
+        <children>
+            <ToggleButton fx:id="btnShows" layoutX="544.0" layoutY="450.0" mnemonicParsing="false" onAction="#viewShows" prefHeight="44.0" prefWidth="207.0" style="-fx-background-color: #353238;" text="Vizualizează toate spectacolele" textFill="WHITE">
+                <font>
+                    <Font name="Montserrat Regular" size="12.0" />
+                </font>
+
+            </ToggleButton>
+            <Text fx:id="lblTitle" layoutX="612.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titlul spectacolului" wrappingWidth="175.12961684300797">
+                <font>
+                    <Font name="Montserrat Regular" size="18.0" />
+                </font>
+            </Text>
+            <Text fx:id="lblDescription" layoutX="614.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrierea spectacolului" wrappingWidth="250.12961684300797">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+            <Text layoutX="381.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dată început:">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+            <Text layoutX="381.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dată sfârșit:">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+            <Text fx:id="lblStartDate" layoutX="519.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="yyyy-mm-dd">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+            <Text fx:id="lblEndDate" layoutX="519.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="yyyy-mm-dd">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+            <Text layoutX="381.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ora:">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+            <Text fx:id="lblHour" layoutX="519.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hh:mm">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+            <ImageView fx:id="uploadedFilmPoster" fitHeight="237.0" fitWidth="201.0" layoutX="381.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+
+            </ImageView>
+        </children>
+    </AnchorPane>
+    <AnchorPane prefHeight="37.0" prefWidth="702.0">
+        <children>
+            <MenuBar prefHeight="35.0" prefWidth="900.0" style="-fx-min-width: 100%; -fx-background-color: #353238;" />
+            <Text fill="WHITE" layoutX="18.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Adăugarea unui nou spectacol">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font></Text>
+        </children>
+    </AnchorPane>
+    <AnchorPane layoutY="34.0" prefHeight="379.0" prefWidth="369.0">
+        <children>
+            <Separator layoutX="361.0" layoutY="1.0" orientation="VERTICAL" prefHeight="561.0" prefWidth="13.0" />
+            <Text layoutX="12.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descriere:">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="updateShowStartDate" layoutX="78.0" layoutY="327.0" onAction="#modifyStartDate" prefHeight="28.0" prefWidth="132.0" promptText="yyyy-mm-dd" />
+            <Text layoutX="33.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dată:">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="34.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titlu:">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="85.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dată început:">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="210.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dată sfârșit:">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="36.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ora:">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Text>
+            <TextField fx:id="updateTitle" layoutX="84.0" layoutY="139.0" onKeyPressed="#modifyTitle" onKeyReleased="#modifyTitle" prefHeight="27.0" prefWidth="269.0" promptText="Introduceți titlul spectacolului aici...">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="updateDescription" layoutX="82.0" layoutY="215.0" onKeyPressed="#modifyDescription" onKeyReleased="#modifyDescription" prefHeight="58.0" prefWidth="269.0" promptText="Introduceți descrierea spectacolului aici...">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="btnAdd" layoutX="230.0" layoutY="464.0" mnemonicParsing="false" onAction="#addShow" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #353238;" text="Adaugă spectacol" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Button>
+            <Text layoutX="22.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imagine:">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="updateShowEndDate" layoutX="214.0" layoutY="327.0" onAction="#modifyEndDate" prefHeight="28.0" prefWidth="132.0" promptText="yyyy-mm-dd" />
+            <ComboBox fx:id="updateHour" layoutX="80.0" layoutY="411.0" onAction="#modifyHour" prefHeight="28.0" prefWidth="97.0" promptText="hh:mm" />
+            <TextField fx:id="updateImage" layoutX="84.0" layoutY="68.0" onMouseExited="#modifyPoster" prefHeight="27.0" prefWidth="269.0" promptText="Introduceti adresa afisului spectacolului ...">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </TextField>
+        </children>
+    </AnchorPane>
+      <Button fx:id="backButton" contentDisplay="TOP" graphicTextGap="0.0" layoutX="843.0" layoutY="-3.0" minHeight="21.0" mnemonicParsing="false" onAction="#back" prefHeight="34.0" prefWidth="57.0" style="-fx-background-color: none; -fx-label-padding: -10; -fx-font-size: 12;" text="Înapoi" textAlignment="CENTER" textFill="#ebdfdf">
+          <font>
+              <Font name="Montserrat Regular" size="12.0" />
+          </font>
+          <cursor>
+              <Cursor fx:constant="HAND" />
+          </cursor>
+      </Button>
+</children>
+</AnchorPane>

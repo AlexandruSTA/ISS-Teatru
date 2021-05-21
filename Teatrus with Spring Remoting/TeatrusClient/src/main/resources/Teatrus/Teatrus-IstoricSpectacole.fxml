@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Teatrus.client.TeatrusIstoricSpectacoleFXML">
+    <children>
+        <AnchorPane prefHeight="37.0" prefWidth="702.0">
+            <children>
+                <MenuBar prefHeight="35.0" prefWidth="900.0" style="-fx-min-width: 100%; -fx-background-color: #353238;" />
+                <Text fill="WHITE" layoutX="18.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Istoricul rezervărilor">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="table" layoutY="34.0" prefHeight="564.0" prefWidth="900.0">
+            <columns>
+                <TableColumn fx:id="idNumber" prefWidth="110.0" text="ID" />
+                <TableColumn fx:id="firstName" prefWidth="145.0" text="Nume" />
+                <TableColumn fx:id="lastName" prefWidth="139.0" text="Prenume" />
+                <TableColumn fx:id="show" prefWidth="149.0" text="Spectacol" />
+                <TableColumn fx:id="date" prefWidth="184.0" text="Dată" />
+                <TableColumn fx:id="time" prefWidth="165.0" text="Oră" />
+            </columns>
+        </TableView>
+          <Button fx:id="backButton" contentDisplay="TOP" graphicTextGap="0.0" layoutX="852.0" layoutY="-1.0" minHeight="21.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="57.0" style="-fx-background-color: none; -fx-label-padding: -10; -fx-font-size: 12;" text="Înapoi" textAlignment="CENTER" textFill="#ebdfdf">
+              <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+              </font>
+              <cursor>
+                  <Cursor fx:constant="HAND" />
+              </cursor>
+          </Button>
+    </children>
+</AnchorPane>

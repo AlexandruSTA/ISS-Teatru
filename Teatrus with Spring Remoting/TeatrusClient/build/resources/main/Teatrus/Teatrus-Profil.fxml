@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Teatrus.client.TeatrusProfilFXML">
+    <children>
+        <AnchorPane layoutX="-3.0" layoutY="24.0" prefHeight="572.0" prefWidth="351.0">
+            <children>
+                <TextField fx:id="updateFirstName" layoutX="130.0" layoutY="127.0"/> <!--onKeyPressed="#modifyName" onKeyReleased="#modifyName" />-->
+                <TextField fx:id="updateLastName" layoutX="131.0" layoutY="191.0"/> <!--onKeyPressed="#modifySurname" onKeyReleased="#modifySurname"/>-->
+                <TextField fx:id="updateEmail" layoutX="131.0" layoutY="248.0"/> <!-- onKeyPressed="#modifyEmail" onKeyReleased="#modifyEmail" />-->
+                <Text layoutX="15.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nume:">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+                <Text layoutX="14.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenume:">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+                <Text layoutX="17.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+                <Button fx:id="btnSaveProfileData" layoutX="95.0" layoutY="443.0" minWidth="30.0" mnemonicParsing="false" onAction="#saveData" prefHeight="30.0" prefWidth="162.0" style="-fx-background-color: #353238; -fx-min-width: 40;" text="Salvează" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Button>
+                <Text layoutX="25.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editează profilul">
+                    <font>
+                        <Font name="Montserrat Regular" size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="15.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parola:">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Text>
+            <PasswordField fx:id="updatePassword" layoutX="130.0" layoutY="319.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="45.0" prefWidth="702.0">
+            <children>
+                <MenuBar prefHeight="45.0" prefWidth="900.0" style="-fx-min-width: 100%; -fx-background-color: #353238;" />
+                <Label fx:id="windowTitleLabel" layoutX="10.0" layoutY="6.0" textFill="WHITE">
+                    <font>
+                        <Font size="17.0" />
+                    </font></Label>
+            </children>
+        </AnchorPane>
+        <Separator layoutX="345.0" layoutY="38.0" orientation="VERTICAL" prefHeight="560.0" prefWidth="11.0" />
+        <Label fx:id="lblStatut" layoutX="436.0" layoutY="319.0" text="Statut">
+         <font>
+            <Font name="Montserrat Regular" size="18.0" />
+         </font></Label>
+        <Label fx:id="lastNameLabelNew" layoutX="439.0" layoutY="115.0" />
+        <Text layoutX="416.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detaliile curente ale contului">
+            <font>
+                <Font name="Montserrat Regular" size="18.0" />
+            </font>
+        </Text>
+        <Label fx:id="firstNameLabelNew" layoutX="440.0" layoutY="94.0" />
+        <Label fx:id="emailLabelNew" layoutX="416.0" layoutY="143.0">
+
+        </Label>
+      <Label fx:id="lblFullName" layoutX="428.0" layoutY="183.0" text="Nume si prenume">
+         <font>
+            <Font name="Montserrat Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmail" layoutX="437.0" layoutY="248.0" text="Email">
+         <font>
+            <Font name="Montserrat Regular" size="18.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon glyphName="USER" layoutX="385.0" layoutY="202.0" size="2em" />
+      <FontAwesomeIcon glyphName="ENVELOPE" layoutX="382.0" layoutY="268.0" size="2em" />
+      <FontAwesomeIcon glyphName="SUITCASE" layoutX="382.0" layoutY="339.0" size="2em" />
+          <Button fx:id="backButton" contentDisplay="TOP" graphicTextGap="0.0" layoutX="843.0" layoutY="6.0" minHeight="21.0" mnemonicParsing="false" onAction="#back" prefHeight="34.0" prefWidth="57.0" style="-fx-background-color: none; -fx-label-padding: -10; -fx-font-size: 12;" text="Înapoi" textAlignment="CENTER" textFill="#ebdfdf">
+              <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+              </font>
+              <cursor>
+                  <Cursor fx:constant="HAND" />
+              </cursor>
+          </Button>
+    </children>
+</AnchorPane>

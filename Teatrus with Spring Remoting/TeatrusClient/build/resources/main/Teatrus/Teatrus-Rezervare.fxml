@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="380.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Teatrus.client.TeatrusRezervareFXML">
+   <children>
+      <AnchorPane prefHeight="300.0" prefWidth="400.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/bookingSummary-01.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="100.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spectacol:" />
+            <Text layoutX="102.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data:" />
+            <Text layoutX="105.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ora:" />
+            <ImageView fitHeight="99.0" fitWidth="113.0" layoutX="192.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/drink-01.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="249.0" layoutX="79.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/bookedSuccessfully-01.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="showSummary" layoutX="161.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="dateSummary" layoutX="161.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="timeSummary" layoutX="158.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20:00" />
+            <Text layoutX="105.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numarul de locuri:" />
+            <Text fx:id="seatSummary" layoutX="156.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" wrappingWidth="58.9814453125" />
+            <ToggleButton fx:id="closeButton" layoutX="219.0" layoutY="342.0" mnemonicParsing="false" onAction="#closeStage" prefHeight="44.0" prefWidth="99.0" style="-fx-background-color: white;" text="Close">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </ToggleButton>
+            <Label fx:id="lblSeats" layoutX="215.0" layoutY="201.0" prefHeight="17.0" prefWidth="48.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

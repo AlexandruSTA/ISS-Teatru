@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'Teatrus-Spring Remoting'
+version '1.0-SNAPSHOT'
+
+mainClassName='StartApp'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+
+dependencies {
+    compile "de.jensd:fontawesomefx:8.1.1"
+    compile "de.jensd:fontawesomefx:8.2"
+    compile project (':TeatrusModel')
+    compile project (':TeatrusServices')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.springframework:spring-context:5.0.4.RELEASE'
+
+}
