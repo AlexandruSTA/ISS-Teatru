@@ -46,7 +46,7 @@ public class StartApp extends Application {
 
             root=FXMLLoader.load(getClass().getResource("/Teatrus/Teatrus-Autentificare.fxml"));
             StartApp.primaryStage=primaryStage;
-            primaryStage.setTitle("Autentificare");
+            primaryStage.setTitle("Teatrus - Autentificare");
             Scene scene=new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);

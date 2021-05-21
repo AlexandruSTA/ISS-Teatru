@@ -177,7 +177,7 @@ public class TeatrusServices implements ITeatrusServices {
     @Override
     public User findUser(User u) {
         for (User user:getAllUsers()){
-            if (user.getNumeUtilizator().equals(u.getNumeUtilizator())&&user.getParola().equals(u.getParola())){
+            if (user.getNumeUtilizator().equals(u.getNumeUtilizator())){
                 return user;
             }
         }

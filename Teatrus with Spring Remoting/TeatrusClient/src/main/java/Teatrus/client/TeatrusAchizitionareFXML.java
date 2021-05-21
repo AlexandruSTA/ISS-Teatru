@@ -25,7 +25,7 @@ import java.util.ResourceBundle;
 
 public class TeatrusAchizitionareFXML extends UnicastRemoteObject implements Initializable, Serializable {
 
-    static int numberOfPlaces=0;
+    public int numberOfPlaces=0;
     public Label totalSeatsLabel;
     public Label bookedSeatsLabel;
     public Label availableSeatsLabel;

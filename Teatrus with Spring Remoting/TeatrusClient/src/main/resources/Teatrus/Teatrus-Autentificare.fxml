@@ -34,7 +34,7 @@
             </Button>
             <FontAwesomeIcon fill="#68263e" glyphName="USER" layoutX="35.0" layoutY="143.0" size="1.5em" />
             <FontAwesomeIcon glyphName="LOCK" layoutX="36.0" layoutY="196.0" size="1.5em" />
-            <Label layoutX="105.0" layoutY="335.0" onMouseClicked="#register" text="Creeaza un cont . . ." />
+            <Label layoutX="105.0" layoutY="335.0" onMouseClicked="#register" text="Creeaza un cont . . ." textFill="#6420e4" />
          </children></AnchorPane>
    </children>
 </AnchorPane>

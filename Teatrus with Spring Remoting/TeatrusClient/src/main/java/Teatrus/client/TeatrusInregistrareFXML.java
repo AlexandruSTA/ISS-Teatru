@@ -4,12 +4,14 @@ import Teatrus.model.User;
 import Teatrus.services.ITeatrusObserver;
 import Teatrus.services.TeatrusException;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.net.URL;
 import java.rmi.RemoteException;
@@ -68,6 +70,7 @@ public class TeatrusInregistrareFXML extends UnicastRemoteObject implements Seri
             user.setParola(savePassword.getText());
             user.setTipUtilizator(2);
 
+            if (StartApp.serverOperations.findUser(user)==null){
             StartApp.serverOperations.addUser(user);
             SceneCreator.launchScene("/Teatrus/Teatrus-Autentificare.fxml","Teatrus - Autentificare");
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -75,13 +78,22 @@ public class TeatrusInregistrareFXML extends UnicastRemoteObject implements Seri
             alert.setHeaderText("Inregistrarea s-a realizat cu succes !");
             alert.setContentText("Contul a fost adaugat cu succes !");
             alert.showAndWait();
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Teatrus");
+                alert.setHeaderText("Inregistrarea nu s-a realizat cu succes !");
+                alert.setContentText("Contul nu a fost adaugat deoarece credentialele sunt deja utilizate de alt utilizator !");
+                alert.showAndWait();
+            }
         }
         catch (Exception exc){
             System.out.println(exc.getMessage());
         }
 
     }
-
-    public void back(ActionEvent event) {
+    @FXML
+    public void back(ActionEvent event) throws IOException {
+        SceneCreator.launchScene("/Teatrus/Teatrus-Autentificare.fxml","Teatrus - Autentificare");
     }
 }
